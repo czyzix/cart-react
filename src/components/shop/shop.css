@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    margin: 20px auto;
+    font-family: Anton;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.products-container {
+    margin: 20px auto;
+    max-width: 990px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: center;
+}
