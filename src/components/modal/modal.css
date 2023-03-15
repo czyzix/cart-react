@@ -1,19 +1,66 @@
-.modal{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(188, 255, 227);
-    padding: 100px;
-    z-index: 100;
-}
-
 .overlay-modal {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.37);
-    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.651);
+    z-index: 1000;
+}
+
+.modal{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 1000;
+    
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+.modal-close-btn {
+    color: white;
+    background-color: black;
+    border: none;
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.product-imgs {
+    max-width: 350px;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    padding: 20px 40px 20px 20px;
+}
+
+.td-title {
+    padding-right: 40px;
+    font-weight: 600;
+}
+
+.modal-add-to-cart-btn {
+    border: none;
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px 0;
+    cursor: pointer;
 }
