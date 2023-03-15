@@ -1,7 +1,7 @@
 import Cart from './components/cart/cart.js';
 import Shop from './components/shop/shop.js';
 import Navbar from './components/navbar/navbar.js';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import data from './data.js';
 
 function App() {
