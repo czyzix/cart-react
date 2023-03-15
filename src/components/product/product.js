@@ -1,8 +1,11 @@
 import "./product.css";
 import { useState } from "react";
+import Modal from "../modal/modal";
 
 const Product = (props) => {
     
+    {/* PRODUCT HOVER */ }
+
     const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseOver = () => {
@@ -22,24 +25,45 @@ const Product = (props) => {
     const buttonStyle = {
         top: isHovered ? '0px' : '-50px',
         transform: isHovered ? 'translate(0%, -135%)' : 'none',
-        transition: 'all 0.2s ease-in-out',
+        transition: 'all 0.25s ease-in-out',
     };
 
-    return ( 
-        <div className="card">
-            <div className="img-button-container">
-                <img 
-                    className="product-img" 
-                    src={`../productsphotos/${imgSrc}.jpg`} 
-                    alt={product.name} 
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
-                />
-                <button className="add-to-cart-button" style={buttonStyle} onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}>ADD TO CART</button>
+    {/* MODAL */ }
+
+    const [showModal, setShowModal] = useState(false);
+
+    const handleShowModal = () => setShowModal(true);
+    const handleCloseModal = () => setShowModal(false);
+
+    if(showModal) {
+        document.body.style.overflowY = "hidden";
+    } else {
+        document.body.style.overflowY = "scroll";
+    }
+
+    return (
+        <div className="container">
+            <div className="card">
+                <div className="img-button-container">
+                    <img
+                        className="product-img"
+                        src={`../productsphotos/${imgSrc}.jpg`}
+                        alt={product.name}
+                        onMouseOver={handleMouseOver}
+                        onMouseOut={handleMouseOut}
+                        onClick={handleShowModal}
+                    />
+                    <button
+                        className="add-to-cart-button"
+                        style={buttonStyle}
+                        onMouseOver={handleMouseOver}
+                        onMouseOut={handleMouseOut}
+                    >ADD TO CART</button>
+                </div>
+                <p className="product-name">{product.name}</p>
+                <strong>{productPrice.toFixed(2)} zł</strong>
             </div>
-            <p className="product-name">{product.name}</p>
-            <strong>{productPrice.toFixed(2)} zł</strong>
+            {showModal && <div className="modal-container" onClick={handleCloseModal}><Modal></Modal></div>}
         </div>
     );
 }
