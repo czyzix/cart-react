@@ -4,8 +4,6 @@ import Modal from "../modal/modal";
 
 const Product = (props) => {
     
-    {/* PRODUCT HOVER */ }
-
     const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseOver = () => {
@@ -28,14 +26,9 @@ const Product = (props) => {
         transition: 'all 0.25s ease-in-out',
     };
 
-    {/* MODAL */ }
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const [showModal, setShowModal] = useState(false);
-
-    const handleShowModal = () => setShowModal(true);
-    const handleCloseModal = () => setShowModal(false);
-
-    if(showModal) {
+    if(isModalOpen) {
         document.body.style.overflowY = "hidden";
     } else {
         document.body.style.overflowY = "scroll";
@@ -51,7 +44,7 @@ const Product = (props) => {
                         alt={product.name}
                         onMouseOver={handleMouseOver}
                         onMouseOut={handleMouseOut}
-                        onClick={handleShowModal}
+                        onClick={() => setIsModalOpen(true)}
                     />
                     <button
                         className="add-to-cart-button"
@@ -62,8 +55,8 @@ const Product = (props) => {
                 </div>
                 <p className="product-name">{product.name}</p>
                 <strong>{productPrice.toFixed(2)} zł</strong>
+                <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}></Modal>
             </div>
-            {showModal && <div className="modal-container" onClick={handleCloseModal}><Modal></Modal></div>}
         </div>
     );
 }

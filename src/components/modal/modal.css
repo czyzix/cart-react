@@ -1,8 +1,19 @@
-
 .modal{
-    display: block;
     position: fixed;
-    width: 200px;
-    height: 100px;
-    background-color: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(188, 255, 227);
+    padding: 100px;
+    z-index: 100;
+}
+
+.overlay-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.37);
+    z-index: 100;
 }
