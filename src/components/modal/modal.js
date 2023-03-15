@@ -16,7 +16,7 @@ const Modal = ({open, onClose, product}) => {
             </div>
             <div className="modal-body">
                 <div className="left-side">
-                    <img className="product-imgs" src={`../productsphotos/${product.img_first}.jpg`} alt="" />
+                    <img className="product-imgs" src={`./assets/${product.img_first}.jpg`} alt="" />
                 </div>
                 <div className="right-side">
                     <table>
