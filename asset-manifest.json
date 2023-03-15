@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/taco-cart-react/static/css/main.eaf85973.css",
+    "main.js": "/taco-cart-react/static/js/main.dee16b9f.js",
+    "index.html": "/taco-cart-react/index.html",
+    "main.eaf85973.css.map": "/taco-cart-react/static/css/main.eaf85973.css.map",
+    "main.dee16b9f.js.map": "/taco-cart-react/static/js/main.dee16b9f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eaf85973.css",
+    "static/js/main.dee16b9f.js"
+  ]
+}
