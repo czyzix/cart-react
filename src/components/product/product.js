@@ -15,6 +15,7 @@ const Product = (props) => {
     };
 
     const {product} = props;
+
     const productPrice = product.price;
     const firstImg = product.img_first;
     const secondImg = product.img_second;
@@ -47,7 +48,7 @@ const Product = (props) => {
                         onClick={() => setIsModalOpen(true)}
                     />
                     <button
-                        className="add-to-cart-button"
+                        className="add-to-cart-btn"
                         style={buttonStyle}
                         onMouseOver={handleMouseOver}
                         onMouseOut={handleMouseOut}
@@ -55,7 +56,11 @@ const Product = (props) => {
                 </div>
                 <p className="product-name">{product.name}</p>
                 <strong>{productPrice.toFixed(2)} zł</strong>
-                <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}></Modal>
+                <Modal 
+                    open={isModalOpen} 
+                    onClose={() => setIsModalOpen(false)}
+                    product={product}
+                ></Modal>
             </div>
         </div>
     );
