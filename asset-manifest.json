@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/taco-cart-react/static/css/main.eaf85973.css",
-    "main.js": "/taco-cart-react/static/js/main.0d7679b4.js",
-    "index.html": "/taco-cart-react/index.html",
-    "main.eaf85973.css.map": "/taco-cart-react/static/css/main.eaf85973.css.map",
-    "main.0d7679b4.js.map": "/taco-cart-react/static/js/main.0d7679b4.js.map"
+    "main.css": "/cart-react/static/css/main.eaf85973.css",
+    "main.js": "/cart-react/static/js/main.f1500afd.js",
+    "index.html": "/cart-react/index.html",
+    "main.eaf85973.css.map": "/cart-react/static/css/main.eaf85973.css.map",
+    "main.f1500afd.js.map": "/cart-react/static/js/main.f1500afd.js.map"
   },
   "entrypoints": [
     "static/css/main.eaf85973.css",
-    "static/js/main.0d7679b4.js"
+    "static/js/main.f1500afd.js"
   ]
 }
