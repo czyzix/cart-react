@@ -41,7 +41,7 @@ const Product = (props) => {
                 <div className="img-button-container">
                     <img
                         className="product-img"
-                        src={`productphotos/${imgSrc}.JPG`}
+                        src={process.env.PUBLIC_URL + `/productphotos/${imgSrc}.jpg`}
                         alt={product.name}
                         onMouseOver={handleMouseOver}
                         onMouseOut={handleMouseOut}
