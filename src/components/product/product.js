@@ -41,7 +41,7 @@ const Product = (props) => {
                 <div className="img-button-container">
                     <img
                         className="product-img"
-                        src={`productphotos/${imgSrc}.jpg`}
+                        src={`productphotos/${imgSrc}.JPG`}
                         alt={product.name}
                         onMouseOver={handleMouseOver}
                         onMouseOut={handleMouseOut}
